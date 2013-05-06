@@ -65,20 +65,24 @@ turn left or right
 
 We can declare a new datatype
 
-> data Faces = North | East | South | West deriving Show
+We add a bunch of typeclasses
+Eq for equality
+Show for printing
+Ord for Ordinal (they are in order)
+Enum of enumeration which means we can use succ (successor) and pred
+(predecessor)
+
+Typeclasses are like inheritenance on data types.
+
+> data Faces = North | East | South | West deriving (Show,Eq,Ord,Enum)
+
+> turn West DRight = North
+> turn North DLeft = West
+> turn x DLeft = pred x
+> turn x DRight = succ x
 
 We can write a new function
-
-> turn North DLeft = West
-> turn North DRight = East
-> turn South DLeft = East
-> turn South DRight = West
-> turn East DLeft = North
-> turn East DRight = South
-> turn West DLeft = South
-> turn West DRight = North
 
 > turnleft face = turn face DLeft
 > turnright face = turn face DRight
 
-That seemed like a lot of typing..
