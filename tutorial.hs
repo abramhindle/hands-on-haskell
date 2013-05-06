@@ -14,3 +14,8 @@ f x = 2 * x
 -- in ghci you can try new functions if you use the word 'let' before the function.
 -- let f x = 3 * x
 
+-- let's make the main function!
+main = do
+  f 2
+  
+-- ok that didn't work
