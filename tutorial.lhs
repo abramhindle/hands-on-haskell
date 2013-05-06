@@ -60,5 +60,25 @@ This isn't 2 functions, this is pattern matching.
 *Main> :t opposite
 opposite :: Dirs -> Dirs
 
+So lets imagine we have a robot and it can face N E S W and it can 
+turn left or right
 
+We can declare a new datatype
 
+> data Faces = North | East | South | West deriving Show
+
+We can write a new function
+
+> turn North DLeft = West
+> turn North DRight = East
+> turn South DLeft = East
+> turn South DRight = West
+> turn East DLeft = North
+> turn East DRight = South
+> turn West DLeft = South
+> turn West DRight = North
+
+> turnleft face = turn face DLeft
+> turnright face = turn face DRight
+
+That seemed like a lot of typing..
