@@ -96,3 +96,18 @@ Now let's cover some data types real quick
 > strings = "String!"
 > chars = 'a'
 
+We can use these types in other types like say lists of integers.
+
+> evens = [0,2,4,6,8]
+> odds  = [1,3,5,7,9]
+
+odds :: [Integer] <--- list of Integers
+
+> six = evens !! 3
+> three =  odds !! 2
+> zero = head evens
+> one = head odds
+> olist =  tail odds
+> extrazero = 0 : evens -- add an 0 on the head of evens
+> emptylist = []
+
