@@ -86,3 +86,6 @@ We can write a new function
 > turnleft face = turn face DLeft
 > turnright face = turn face DRight
 
+So now we've got data types and pattern matching.
+
+
