@@ -125,15 +125,22 @@ What about iteration?
 >  let cmp = compare x y in
 >  if (cmp == EQ) then compareLists xs ys else cmp
 
-or
+What about mapping?
 
-> compareLists [] [] = EQ
-> compareLists (x:xs) [] = GT
-> compareLists [] (x:xs) = LT
-> compareLists (x:xs) (y:ys) = if (cmp == EQ) then 
->                                 compareLists xs ys 
->                              else cmp 
->                              where                                 
->                                 cmp = compare x y 
+> doubleList = map (* 2)
 
+(* 2) ? 
+:t (* 2)
+(* 2) :: Num a => a -> a
+
+> multiply = foldr (*) 1 
+
+> turnListLeft = map turnleft
+
+This is overcomplicated
+
+> turnAround dir = foldr (\x y -> turnleft y) dir [1,2]
+> turnAround dir = turnleft ( turnleft dir )
+> spin dir = foldr (\x y -> turnleft y) dir [1,2,3,4]
+> spin dir = turnleft (turnleft (turnleft (turnleft dir)))
 
