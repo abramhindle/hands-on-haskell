@@ -15,8 +15,13 @@ f x = 2 * x
 -- let f x = 3 * x
 
 -- let's make the main function!
+-- wait... what does do mean?
+-- * think of it saying to haskell please execute these commands in order
 main = do
   print (f 2)
+  print (f 4)
+  print (f 8)
+  print (f 16)
   
 -- to compile it try
 -- compile-haskell tutorial.hs
