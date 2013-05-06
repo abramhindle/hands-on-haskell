@@ -16,6 +16,12 @@ f x = 2 * x
 
 -- let's make the main function!
 main = do
-  f 2
+  print (f 2)
   
--- ok that didn't work
+-- to compile it try
+-- compile-haskell tutorial.hs
+-- ghc tutorial.hs
+-- if you get some --hash-size=31 error try to   
+-- sudo ln -s /usr/bin/ld.bfd /usr/bin/ld
+-- http://stackoverflow.com/questions/13046319/haskell-ghc-compiling-linking-error-not-creating-executable-linux
+  
