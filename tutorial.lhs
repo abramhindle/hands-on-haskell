@@ -43,6 +43,9 @@ arguments to mul.  This is currying! It allows for easy function
 composition, maybe it is a little crazy but you see it too much in
 haskell to ignore.
 
+So we can make functions and it seems we have numbers, but we can make
+our own types as well.
 
+> data Dirs = DLeft | DRight
 
 
