@@ -144,3 +144,5 @@ This is overcomplicated
 > spin dir = foldr (\x y -> turnleft y) dir [1,2,3,4]
 > spin dir = turnleft (turnleft (turnleft (turnleft dir)))
 
+
+
