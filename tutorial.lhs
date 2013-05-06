@@ -88,4 +88,11 @@ We can write a new function
 
 So now we've got data types and pattern matching.
 
+Now let's cover some data types real quick
+
+> bools = True || False
+> ints = 4
+> floats = 4.0
+> strings = "String!"
+> chars = 'a'
 
