@@ -46,6 +46,19 @@ haskell to ignore.
 So we can make functions and it seems we have numbers, but we can make
 our own types as well.
 
-> data Dirs = DLeft | DRight
+But we can't print it until we say we can show it using "deriving Show"
+
+> data Dirs = DLeft | DRight deriving Show
+
+We can make functions with these datatypes too
+
+> opposite DLeft = DRight
+> opposite DRight = DLeft
+
+This isn't 2 functions, this is pattern matching.
+
+*Main> :t opposite
+opposite :: Dirs -> Dirs
+
 
 
