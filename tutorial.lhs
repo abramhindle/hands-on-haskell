@@ -111,3 +111,29 @@ odds :: [Integer] <--- list of Integers
 > extrazero = 0 : evens -- add an 0 on the head of evens
 > emptylist = []
 
+How do we navigate lists or use them?
+
+> diffhead (x:y:z) = x - y
+> compareHeads (x:xs) (y:ys) = compare x y
+
+What about iteration?
+
+> compareLists [] [] = EQ
+> compareLists (x:xs) [] = GT
+> compareLists [] (x:xs) = LT
+> compareLists (x:xs) (y:ys) =   
+>  let cmp = compare x y in
+>  if (cmp == EQ) then compareLists xs ys else cmp
+
+or
+
+> compareLists [] [] = EQ
+> compareLists (x:xs) [] = GT
+> compareLists [] (x:xs) = LT
+> compareLists (x:xs) (y:ys) = if (cmp == EQ) then 
+>                                 compareLists xs ys 
+>                              else cmp 
+>                              where                                 
+>                                 cmp = compare x y 
+
+
