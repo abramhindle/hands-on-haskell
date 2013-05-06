@@ -30,3 +30,7 @@ main = do
 -- sudo ln -s /usr/bin/ld.bfd /usr/bin/ld
 -- http://stackoverflow.com/questions/13046319/haskell-ghc-compiling-linking-error-not-creating-executable-linux
   
+-- types
+-- in ghci you can use :type to find out the type of an expression
+-- :type main
+-- :type f
