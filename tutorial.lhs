@@ -144,5 +144,24 @@ This is overcomplicated
 > spin dir = foldr (\x y -> turnleft y) dir [1,2,3,4]
 > spin dir = turnleft (turnleft (turnleft (turnleft dir)))
 
+Writing better functions
 
+> leftOrRight x = [r,l] where
+>   l = turnleft x
+>   r = turnright x 
+
+Note order doesn't matter!
+
+Where lets you define stuff out of order
+let implies an order
+
+> leftOrRight x = 
+>   let r = turnright x in
+>   let l = turnleft x in
+>   [r,l]  
+
+Recursion is easy
+
+> leftTilNorth North = 0
+> leftTilNorth x = 1 + (leftTilNorth (turnleft x))
 
