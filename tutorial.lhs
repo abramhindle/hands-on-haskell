@@ -168,5 +168,6 @@ Recursion is easy
 infinite!
 
 > ones = 1 : ones
-> infl = map (\x y -> x + y) 
+> infl = [0..]
+> double88888 = ( map (* 2) infl ) !! 88888
 
