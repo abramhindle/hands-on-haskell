@@ -165,3 +165,8 @@ Recursion is easy
 > leftTilNorth North = 0
 > leftTilNorth x = 1 + (leftTilNorth (turnleft x))
 
+infinite!
+
+> ones = 1 : ones
+> infl = map (\x y -> x + y) 
+
